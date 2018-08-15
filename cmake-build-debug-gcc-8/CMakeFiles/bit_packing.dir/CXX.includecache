@@ -1449,6 +1449,8 @@ iostream
 -
 vector
 -
+cmath
+-
 xtensor/xio.hpp
 -
 xtensor/xarray.hpp
@@ -1467,10 +1469,6 @@ immintrin.h
 -
 timeit.hpp
 /Users/ray_zhang/home/bit-packing/timeit.hpp
-pack.hpp
-/Users/ray_zhang/home/bit-packing/pack.hpp
-
-/Users/ray_zhang/home/bit-packing/pack.hpp
 
 /Users/ray_zhang/home/bit-packing/timeit.hpp
 iostream

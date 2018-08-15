@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 // xtensor
 #include <xtensor/xio.hpp>
@@ -44,13 +45,27 @@ void print_bitset(std::uint8_t b){
 }
 
 // performs sign on 8 floats at a single time and writes it into int8
-void sign(float* data, std::uint8_t* res, std::size_t n){
-    __m256 tmp = _mm256_load_ps(data);
-    *res = (std::uint8_t) _mm256_movemask_ps(tmp);
+// \param data - floating point array to extract sign from
+// \param res - resulting packed bit array
+// \param size - size of data
+void sign(float* data, std::uint8_t* res, std::size_t size){
+    const std::uint64_t limit = size - size % 8; // 8 floats at a time
+    // TODO: Loop unroll
+    auto i = 0;
+    for(; i < limit; i+=8) {
+        __m256 res1 = _mm256_load_ps(data + i);
+        res[i/8] = (std::uint8_t) _mm256_movemask_ps(res1);
+    }
+    std::uint8_t residue = 0;
+    for(; i < size; i++) {
+        residue |= std::signbit(data[i]) << (8 - (i-limit));
+    }
+    std::cout << "residue is : " << (int) residue << std::endl;
+    res[i/8] = residue;
 }
 
 // Performs 32 byte xors at a single time.
-void xnor(std::uint8_t* x, std::uint8_t* y, std::uint8_t* res){
+void xnor(std::uint8_t* x, std::uint8_t* y, std::uint8_t* res, std::size_t size){
     __m256i tmp_x = _mm256_load_si256((__m256i*) x);
     __m256i tmp_y = _mm256_load_si256((__m256i*) y);
     *(__m256i*) res = ~_mm256_xor_si256(tmp_x, tmp_y);
@@ -79,7 +94,7 @@ void CSA(__m256i& h, __m256i& l, __m256i a, __m256i b, __m256i c)
 
 }
 
-uint64_t popcnt(const __m256i* data, const uint64_t size)
+std::uint64_t popcnt(const __m256i* data, const std::uint64_t size)
 {
     __m256i total     = _mm256_setzero_si256();
     __m256i ones      = _mm256_setzero_si256();
@@ -89,9 +104,8 @@ uint64_t popcnt(const __m256i* data, const uint64_t size)
     __m256i sixteens  = _mm256_setzero_si256();
     __m256i twosA, twosB, foursA, foursB, eightsA, eightsB;
 
-    const uint64_t limit = size - size % 16;
-    uint64_t i = 0;
-
+    const std::uint64_t limit = size - size % 16;
+    auto i = 0;
     for(; i < limit; i += 16)
     {
         CSA(twosA, ones, ones, data[i+0], data[i+1]);
@@ -123,50 +137,61 @@ uint64_t popcnt(const __m256i* data, const uint64_t size)
         total = _mm256_add_epi64(total, popcount(data[i]));
 
 
-    return static_cast<uint64_t>(_mm256_extract_epi64(total, 0))
-           + static_cast<uint64_t>(_mm256_extract_epi64(total, 1))
-           + static_cast<uint64_t>(_mm256_extract_epi64(total, 2))
-           + static_cast<uint64_t>(_mm256_extract_epi64(total, 3));
+    return static_cast<std::uint64_t>(_mm256_extract_epi64(total, 0))
+           + static_cast<std::uint64_t>(_mm256_extract_epi64(total, 1))
+           + static_cast<std::uint64_t>(_mm256_extract_epi64(total, 2))
+           + static_cast<std::uint64_t>(_mm256_extract_epi64(total, 3));
 }
 } // popcnt
 
-uint64_t sum(const uint8_t* data, const size_t size)
+std::uint64_t sum(const std::uint8_t* data, const std::size_t size)
 {
     return popcnt::popcnt((const __m256i*) data, size / 32);
 }
 
 int main() {
+    const int ARR_SIZE = 300;
     // avx256 does 8 floats at once at each register.
     xt::xarray<float> arr;
-    arr.resize({256});
+    arr.resize({ARR_SIZE});
     int _sign = 1;
-    for(int i = 0; i < 256; i++){
+    for(int i = 0; i < ARR_SIZE; i++){
         arr(i) = i * _sign;
         _sign *= -1;
     }
-    for(auto i : arr){
-        std::cout << i << " ";
-    }
-    std::cout << std::endl;
-    float* data = arr.data() + arr.data_offset();
     xtl::xdynamic_bitset<std::uint8_t> bitset;
-    bitset.resize({256});
-
-    // Move 8 floats at a time
+    bitset.resize({ARR_SIZE});
     sign(arr.data(), bitset.data(), arr.size());
 
     for(auto i = 0; i < bitset.size(); i++){
         std::cout << bitset[i] << " ";
     }
-    std::cout << "\n\n\n" << std::endl;
 
+    assert(bitset.count() == ARR_SIZE/2);
 
-    xtl::xdynamic_bitset<std::uint8_t> result;
-    result.resize({256});
-    // Perform XNOR on itself - it should be 0.
-    xnor(bitset.data(), bitset.data(), result.data());
-
-    std::cout << sum((const std::uint8_t *)result.data(), result.size()/NUM_BITS) << std::endl;
+//    for(auto i : arr){
+//        std::cout << i << " ";
+//    }
+//    std::cout << std::endl;
+//    float* data = arr.data() + arr.data_offset();
+//    xtl::xdynamic_bitset<std::uint8_t> bitset;
+//    bitset.resize({256});
+//
+//    // Move 8 floats at a time
+//    sign(arr.data(), bitset.data(), arr.size());
+//
+//    for(auto i = 0; i < bitset.size(); i++){
+//        std::cout << bitset[i] << " ";
+//    }
+//    std::cout << "\n\n\n" << std::endl;
+//
+//
+//    xtl::xdynamic_bitset<std::uint8_t> result;
+//    result.resize({256});
+//    // Perform XNOR on itself - it should be 0.
+//    xnor(bitset.data(), bitset.data(), result.data());
+//
+//    std::cout << sum((const std::uint8_t *)result.data(), result.size()/NUM_BITS) << std::endl;
 
     return 0;
 }
