@@ -1465,6 +1465,8 @@ xtensor/xview.hpp
 -
 xtl/xdynamic_bitset.hpp
 -
+xsimd/memory/xsimd_aligned_allocator.hpp
+-
 immintrin.h
 -
 timeit.hpp

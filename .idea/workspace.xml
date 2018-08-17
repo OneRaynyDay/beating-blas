@@ -12,6 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f08d4a1-c224-4f15-9be1-cd35a8310f82" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.dSYM/Contents/Resources/DWARF/bit_packing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.dSYM/Contents/Resources/DWARF/bit_packing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -30,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
-              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <caret line="4" column="76" selection-start-line="4" selection-start-column="76" selection-end-line="4" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -38,13 +52,30 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="305" column="24" selection-start-line="305" selection-start-column="24" selection-end-line="305" selection-end-column="24" />
+            <state relative-caret-position="50">
+              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#50#76#0" expanded="true" />
-                <element signature="e#276#298#0" expanded="true" />
+                <element signature="e#293#315#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xcontainer.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/third_party/xtensor/include/xtensor/xcontainer.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="781" selection-start-line="781" selection-end-line="781" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="emmintrin.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/include/emmintrin.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="713" selection-start-line="713" selection-end-line="713" />
             </state>
           </provider>
         </entry>
@@ -52,8 +83,8 @@
       <file leaf-file-name="xdynamic_bitset.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/third_party/xtl/include/xtl/xdynamic_bitset.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="977" column="39" lean-forward="true" selection-start-line="977" selection-start-column="39" selection-end-line="977" selection-end-column="39" />
+            <state relative-caret-position="356">
+              <caret line="305" column="31" selection-start-line="305" selection-start-column="31" selection-end-line="305" selection-end-column="31" />
               <folding>
                 <element signature="e#31080#31106#0" expanded="true" />
               </folding>
@@ -73,7 +104,7 @@
       <file leaf-file-name="avxintrin.h" pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/include/avxintrin.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
+            <state relative-caret-position="299">
               <caret line="872" selection-start-line="872" selection-end-line="872" />
             </state>
           </provider>
@@ -90,6 +121,7 @@
         <option value="$PROJECT_DIR$/timeit.hpp" />
         <option value="$PROJECT_DIR$/pack.hpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/allign.hpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
@@ -103,11 +135,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="4" />
-    <option name="y" value="26" />
-    <option name="width" value="1432" />
-    <option name="height" value="870" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="1280" />
+    <option name="y" value="27" />
+    <option name="width" value="637" />
+    <option name="height" value="704" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -165,29 +197,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534351863219</updated>
-      <workItem from="1534351864908" duration="33658000" />
+      <workItem from="1534351864908" duration="58622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33658000" />
+    <option name="totallyTimeSpent" value="58622000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="26" width="1432" height="870" extended-state="6" />
+    <frame x="-2556" y="583" width="1276" height="705" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25139666" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28213167" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.32934132" />
+      <window_info anchor="bottom" id="Messages" weight="0.41167665" />
       <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42085427" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6877971" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.25898203" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.27020958" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -195,6 +227,26 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.25074852" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14106584" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32934132" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.27170658" />
+      <window_info anchor="bottom" id="Messages" order="0" visible="true" weight="0.32934132" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="CMake" order="4" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -204,14 +256,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>282</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="40" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -242,13 +287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/include/avxintrin.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="872" selection-start-line="872" selection-end-line="872" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/include/avx2intrin.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -258,29 +296,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/third_party/xtl/include/xtl/xdynamic_bitset.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="977" column="39" lean-forward="true" selection-start-line="977" selection-start-column="39" selection-end-line="977" selection-end-column="39" />
+        <state relative-caret-position="356">
+          <caret line="305" column="31" selection-start-line="305" selection-start-column="31" selection-end-line="305" selection-end-column="31" />
           <folding>
             <element signature="e#31080#31106#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/include/emmintrin.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="713" selection-start-line="713" selection-end-line="713" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/third_party/xtensor/include/xtensor/xcontainer.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="781" selection-start-line="781" selection-end-line="781" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/include/avxintrin.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="872" selection-start-line="872" selection-end-line="872" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <caret line="4" column="76" selection-start-line="4" selection-start-column="76" selection-end-line="4" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/allign.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="305" column="24" selection-start-line="305" selection-start-column="24" selection-end-line="305" selection-end-column="24" />
+        <state relative-caret-position="50">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#50#76#0" expanded="true" />
-            <element signature="e#276#298#0" expanded="true" />
+            <element signature="e#293#315#0" expanded="true" />
           </folding>
         </state>
       </provider>
