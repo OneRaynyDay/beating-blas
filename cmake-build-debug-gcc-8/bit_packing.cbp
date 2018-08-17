@@ -48,6 +48,7 @@
 					<Add directory="/Users/ray_zhang/home/bit-packing/third_party/xtensor/include"/>
 					<Add directory="/Users/ray_zhang/home/bit-packing/third_party/xtensor-python/include"/>
 					<Add directory="/Users/ray_zhang/home/bit-packing/third_party/xsimd/include"/>
+					<Add directory="/Users/ray_zhang/home/bit-packing/third_party/xtensor-blas/include"/>
 					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/../../../../../../include/c++/8.2.0"/>
 					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/../../../../../../include/c++/8.2.0/x86_64-apple-darwin17.7.0"/>
 					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/../../../../../../include/c++/8.2.0/backward"/>
@@ -77,6 +78,7 @@
 					<Add directory="/Users/ray_zhang/home/bit-packing/third_party/xtensor/include"/>
 					<Add directory="/Users/ray_zhang/home/bit-packing/third_party/xtensor-python/include"/>
 					<Add directory="/Users/ray_zhang/home/bit-packing/third_party/xsimd/include"/>
+					<Add directory="/Users/ray_zhang/home/bit-packing/third_party/xtensor-blas/include"/>
 					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/../../../../../../include/c++/8.2.0"/>
 					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/../../../../../../include/c++/8.2.0/x86_64-apple-darwin17.7.0"/>
 					<Add directory="/usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/../../../../../../include/c++/8.2.0/backward"/>

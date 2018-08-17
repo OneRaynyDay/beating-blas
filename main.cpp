@@ -1,17 +1,22 @@
+// Define this at the top to avoid collisions
+#define XTENSOR_USE_XSIMD
 #include <iostream>
 #include <vector>
 #include <cmath>
 
+// xtensor-blas benchmark
+#include <xtensor-blas/xlinalg.hpp>
+
 // xtensor
-#define XTENSOR_USE_XSIMD
 #include <xtensor/xio.hpp>
 #include <xtensor/xarray.hpp>
 #include <xtensor/xeval.hpp>
 #include <xtensor/xtensor.hpp>
 #include <xtensor/xfixed.hpp>
 #include <xtensor/xview.hpp>
+
+// xtensor bitset simd instructions
 #include <xtl/xdynamic_bitset.hpp>
-// Required for simd instructions
 #include <xsimd/memory/xsimd_aligned_allocator.hpp>
 
 // intrinsics
@@ -236,8 +241,9 @@ void sign(const float* data, std::uint8_t* res, std::size_t size){
         accum[3] |= _mm256_movemask_ps(res15) << pt[1];
         accum[3] |= _mm256_movemask_ps(res16) << pt[0];
 
+//        __m256i chunk = _mm256_load_si256((__m256i *) accum);
         __m128i chunk = _mm_load_si128((__m128i *) accum);
-        *(__m128i*)(res + i/FLOAT_PACK) = chunk;
+        _mm_store_si128((__m128i*) (res + i/FLOAT_PACK), chunk);
     }
 
     for(; i < size - size % FLOAT_PACK; i+=FLOAT_PACK) {
@@ -270,7 +276,7 @@ void xnor(std::uint8_t* x, std::uint8_t* y, std::uint8_t* res, std::size_t size)
     for(; i < limit; i+=UINT8_PACK*SIZE_SCALE) {
         __m256i tmp_x = _mm256_load_si256((__m256i *) (x + i/SIZE_SCALE));
         __m256i tmp_y = _mm256_load_si256((__m256i *) (y + i/SIZE_SCALE));
-        *(__m256i *) (res + i/SIZE_SCALE) = ~_mm256_xor_si256(tmp_x, tmp_y);
+        _mm256_store_si256((__m256i *) (res + i/SIZE_SCALE), ~_mm256_xor_si256(tmp_x, tmp_y));
     }
     // The remaining <32 uint8_t's are computed in sequence
     auto residue = size % SIZE_SCALE;
@@ -302,7 +308,6 @@ void CSA(__m256i& h, __m256i& l, __m256i a, __m256i b, __m256i c)
     const __m256i u = a ^ b;
     h = (a & b) | (u & c);
     l = u ^ c;
-
 }
 
 std::uint64_t popcnt(const __m256i* data, const std::uint64_t size)
@@ -401,10 +406,25 @@ unsigned long long xnordot(const xt::xarray<float>& a1, const xt::xarray<float>&
     return sum(res.data(), RESULT_SIZE);
 }
 
+// === alternative benchmark functions ===
+
+auto blas_dot(const xt::xarray<float>& a1, const xt::xarray<float>& a2){
+    return xt::linalg::dot(a1, a2);
+}
+
+auto blas_sign_dot(const xt::xarray<float>& a1, const xt::xarray<float>& a2){
+    auto&& i8a1 = xt::sign(a1);
+    auto&& i8a2 = xt::sign(a2);
+    return xt::linalg::dot(i8a1, i8a2);
+}
+
+// ===
+
 int main() {
     std::cout << std::unitbuf;
-    auto ARR_SIZE = 1;
+    auto ARR_SIZE = 1UL;
     for (int iter = 0; iter < 8; iter++) {
+        std::cout << "====== Array size : " << ARR_SIZE << " ====== " << std::endl;
         // We produce an alternating sequence of 0's and 1's. We need to make it start at 1
         // because sometimes the compiler implicitly turns it to a positive 0 even though it should be negative.
         xt::xarray<float> arr1;
@@ -428,6 +448,7 @@ int main() {
 
         // If iter is odd, then we have a bunch of 0's summed = 0
         // If iter is even, then we have a bunch of 1's summed = ARR_SIZE
+        // This adds overhead - FOR UNIT TESTING ONLY
         auto run = [&](const xt::xarray<float>& x, const xt::xarray<float>& y){
             auto res = xnordot(x, y);
             if (res != ((iter + 1) % 2) * ARR_SIZE) {
@@ -435,7 +456,16 @@ int main() {
             }
         };
 
-        timeit(run, arr1, arr2);
+        run(arr1, arr2);
+
+        std::cout << "=== hand-tuned bitpack+xnor+popcount ===" << std::endl;
+        timeit(xnordot, arr1, arr2);
+
+        std::cout << "=== xtensor-blas dot product ===" << std::endl;
+        timeit(blas_dot, arr1, arr2);
+
+        std::cout << "=== xtensor-blas dot product on bools ===" << std::endl;
+        timeit(blas_sign_dot, arr1, arr2);
 
         // Increase the magnitude after every iteration
         ARR_SIZE *= 10;

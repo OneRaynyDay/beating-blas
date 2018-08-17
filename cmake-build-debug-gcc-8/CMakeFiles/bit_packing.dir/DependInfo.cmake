@@ -14,6 +14,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../third_party/xtensor/include"
   "../third_party/xtensor-python/include"
   "../third_party/xsimd/include"
+  "../third_party/xtensor-blas/include"
   )
 
 # Targets to which this target links.
