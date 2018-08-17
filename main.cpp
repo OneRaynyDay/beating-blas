@@ -31,9 +31,9 @@
 // hw.optional.avx512ifma: 0
 // hw.optional.avx512vbmi: 0
 
-static const int NUM_BITS = 8;
+static constexpr int NUM_BITS = 8;
 
-static const uint8_t lookup8bit[256] = {
+static constexpr uint8_t lookup8bit[256] = {
         /* 0 */ 0, /* 1 */ 1, /* 2 */ 1, /* 3 */ 2,
         /* 4 */ 1, /* 5 */ 2, /* 6 */ 2, /* 7 */ 3,
         /* 8 */ 1, /* 9 */ 2, /* a */ 2, /* b */ 3,
@@ -101,7 +101,7 @@ static const uint8_t lookup8bit[256] = {
 };
 
 // Used to take the first few bits of a uint8_t
-static const unsigned long mask[] = {
+static constexpr unsigned long mask[] = {
     0x00000000UL,
     0x00000001UL,
     0x00000003UL,
@@ -138,7 +138,7 @@ static const unsigned long mask[] = {
 };
 
 // pt = pack table
-static const unsigned pt[] = {
+static constexpr unsigned pt[] = {
     0,
     8,
     16,
@@ -172,7 +172,6 @@ static const unsigned pt[] = {
     240,
     248,
 };
-
 
 void print_vector(const xt::xarray<bool>& b){
     for(bool x : b){
@@ -269,9 +268,9 @@ void xnor(std::uint8_t* x, std::uint8_t* y, std::uint8_t* res, std::size_t size)
     const std::uint64_t limit = size - size % (UINT8_PACK * SIZE_SCALE); // 32 uint8_t's at a time
     auto i = 0;
     for(; i < limit; i+=UINT8_PACK*SIZE_SCALE) {
-        __m256i tmp_x = _mm256_loadu_si256((__m256i_u *) (x + i/SIZE_SCALE));
-        __m256i tmp_y = _mm256_loadu_si256((__m256i_u *) (y + i/SIZE_SCALE));
-        *(__m256i_u *) (res + i/SIZE_SCALE) = ~_mm256_xor_si256(tmp_x, tmp_y);
+        __m256i tmp_x = _mm256_load_si256((__m256i *) (x + i/SIZE_SCALE));
+        __m256i tmp_y = _mm256_load_si256((__m256i *) (y + i/SIZE_SCALE));
+        *(__m256i *) (res + i/SIZE_SCALE) = ~_mm256_xor_si256(tmp_x, tmp_y);
     }
     // The remaining <32 uint8_t's are computed in sequence
     auto residue = size % SIZE_SCALE;
@@ -360,6 +359,9 @@ std::uint64_t popcnt(const __m256i* data, const std::uint64_t size)
 }
 } // popcnt
 
+// Performs popcount (population count) on bits
+// \param data - bits of data
+// \param size - length of data. IMPORTANT: IN BITS.
 unsigned long long sum(const std::uint8_t* data, const std::size_t size)
 {
     static constexpr auto UINT8_PACK = 32;
@@ -385,6 +387,7 @@ unsigned long long sum(const std::uint8_t* data, const std::size_t size)
 }
 
 unsigned long long xnordot(const xt::xarray<float>& a1, const xt::xarray<float>& a2){
+    // Enforce alignment
     xtl::xdynamic_bitset<std::uint8_t, xsimd::aligned_allocator<std::uint8_t, 32>> bitset_a1;
     xtl::xdynamic_bitset<std::uint8_t, xsimd::aligned_allocator<std::uint8_t, 32>> bitset_a2;
     xtl::xdynamic_bitset<std::uint8_t, xsimd::aligned_allocator<std::uint8_t, 32>> res;
@@ -392,19 +395,16 @@ unsigned long long xnordot(const xt::xarray<float>& a1, const xt::xarray<float>&
     bitset_a1.reserve(RESULT_SIZE);
     bitset_a2.reserve(RESULT_SIZE);
     res.reserve(RESULT_SIZE);
-    sign(a1.data(), reinterpret_cast<std::uint8_t*>(bitset_a1.data()), RESULT_SIZE);
-    sign(a2.data(), reinterpret_cast<std::uint8_t*>(bitset_a2.data()), RESULT_SIZE);
-    xnor(reinterpret_cast<std::uint8_t*>(bitset_a1.data()), reinterpret_cast<std::uint8_t*>(bitset_a2.data()), reinterpret_cast<std::uint8_t*>(res.data()), RESULT_SIZE);
-    return sum(reinterpret_cast<std::uint8_t*>(res.data()), RESULT_SIZE);
+    sign(a1.data(), bitset_a1.data(), RESULT_SIZE);
+    sign(a2.data(), bitset_a2.data(), RESULT_SIZE);
+    xnor(bitset_a1.data(), bitset_a2.data(), res.data(), RESULT_SIZE);
+    return sum(res.data(), RESULT_SIZE);
 }
 
 int main() {
     std::cout << std::unitbuf;
-    int size = 1;
-    for (int iter = 0; iter < 6; iter++) {
-        const auto ARR_SIZE = size;
-        size *= 10;
-
+    auto ARR_SIZE = 1;
+    for (int iter = 0; iter < 8; iter++) {
         // We produce an alternating sequence of 0's and 1's. We need to make it start at 1
         // because sometimes the compiler implicitly turns it to a positive 0 even though it should be negative.
         xt::xarray<float> arr1;
@@ -426,53 +426,18 @@ int main() {
             _sign2 *= -1;
         }
 
-        for(int i = 0; i < std::min(10UL, arr1.size()); i++){
-            std::cout << arr1[i] << " ";
-        }
-        std::cout << std::endl;
-
-        for(int i = 0; i < std::min(10UL, arr1.size()); i++){
-            std::cout << arr2[i] << " ";
-        }
-        std::cout << std::endl;
-
         // If iter is odd, then we have a bunch of 0's summed = 0
         // If iter is even, then we have a bunch of 1's summed = ARR_SIZE
-        std::cout << "Preparing xnordot on iter " << iter << std::endl;
-        auto res = xnordot(arr1, arr2);
-        std::cout << "Result : " << res << std::endl;
-        if (res != ((iter + 1) % 2) * ARR_SIZE) {
-            throw std::runtime_error("Something's wrong.");
-        }
+        auto run = [&](const xt::xarray<float>& x, const xt::xarray<float>& y){
+            auto res = xnordot(x, y);
+            if (res != ((iter + 1) % 2) * ARR_SIZE) {
+                throw std::runtime_error("Something's wrong.");
+            }
+        };
+
+        run(arr1, arr2);
+
+        // Increase the magnitude after every iteration
+        ARR_SIZE *= 10;
     }
 }
-
-
-//    xtl::xdynamic_bitset<std::uint8_t> bitset;
-//    bitset.resize({ARR_SIZE});
-//
-//    // === SIGN ===
-//    sign(arr.data(), bitset.data(), arr.size());
-//
-//    for(auto i = 0; i < bitset.size(); i++){
-//        std::cout << bitset[i] << " ";
-//    }
-//    std::cout << std::endl;
-//
-//    assert(bitset.count() == ARR_SIZE/2);
-//    // ======
-//
-//    // === XNOR ===
-//    xtl::xdynamic_bitset<std::uint8_t> result;
-//    result.resize({ARR_SIZE});
-//    xnor(bitset.data(), bitset.data(), result.data(), bitset.size());
-//
-//    for(auto i = 0; i < ARR_SIZE; i++){
-//        std::cout << (int) result[i] << " ";
-//    }
-//    std::cout << std::endl;
-//
-//    if(result.count() != ARR_SIZE)
-//        std::cout << "Something's wrong : " << result.count() << std::endl;
-//    // ======
-//    std::cout << sum(result.data(), result.size());

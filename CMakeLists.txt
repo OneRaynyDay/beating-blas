@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(bit_packing)
 set(CMAKE_CXX_STANDARD 17)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=haswell -I/usr/include/malloc/")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=haswell -pedantic")
 
 add_executable(bit_packing main.cpp timeit.hpp)
 
