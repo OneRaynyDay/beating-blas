@@ -10,5 +10,5 @@ void timeit(T&& lambda, O&& ... params) {
     std::forward<decltype(lambda)>(lambda)(std::forward<decltype(params)>(params)...);
     clock_t stop = clock();
     double elapsed = (double) (stop - start) * 1000.0 / CLOCKS_PER_SEC;
-    printf("Time elapsed in ms: %f", elapsed);
+    printf("Time elapsed in ms: %f\n\n", elapsed);
 }

@@ -1,1 +1,1 @@
-/usr/local/bin/g++-8   -march=haswell -pedantic -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/bit_packing.dir/main.cpp.o  -o bit_packing 
+/usr/local/bin/g++-8   -Wall -march=haswell -O3 -pedantic -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/bit_packing.dir/main.cpp.o  -o bit_packing 

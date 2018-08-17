@@ -435,7 +435,7 @@ int main() {
             }
         };
 
-        run(arr1, arr2);
+        timeit(run, arr1, arr2);
 
         // Increase the magnitude after every iteration
         ARR_SIZE *= 10;
