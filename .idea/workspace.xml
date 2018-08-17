@@ -12,15 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f08d4a1-c224-4f15-9be1-cd35a8310f82" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -47,8 +38,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="243" column="62" selection-start-line="243" selection-start-column="62" selection-end-line="243" selection-end-column="62" />
+            <state relative-caret-position="43">
+              <caret line="348" selection-start-line="348" selection-end-line="348" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
                 <element signature="e#93#119#0" expanded="true" />
@@ -114,8 +105,8 @@
       <file leaf-file-name="avxintrin.h" pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/include/avxintrin.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="872" selection-start-line="872" selection-end-line="872" />
+            <state relative-caret-position="261">
+              <caret line="870" selection-start-line="870" selection-end-line="870" />
             </state>
           </provider>
         </entry>
@@ -207,29 +198,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534351863219</updated>
-      <workItem from="1534351864908" duration="60964000" />
+      <workItem from="1534351864908" duration="61499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60964000" />
+    <option name="totallyTimeSpent" value="61499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="26" width="716" height="435" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.5027933" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3198324" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" weight="0.4535176" />
       <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32934132" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39889196" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5096953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5339196" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.53266335" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -318,13 +309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/include/avxintrin.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="872" selection-start-line="872" selection-end-line="872" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/allign.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -350,10 +334,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/include/avxintrin.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="870" selection-start-line="870" selection-end-line="870" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="243" column="62" selection-start-line="243" selection-start-column="62" selection-end-line="243" selection-end-column="62" />
+        <state relative-caret-position="43">
+          <caret line="348" selection-start-line="348" selection-end-line="348" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
             <element signature="e#93#119#0" expanded="true" />

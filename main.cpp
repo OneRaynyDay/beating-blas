@@ -201,12 +201,12 @@ void sign(const float* data, std::uint8_t* res, std::size_t size){
     // FLOAT_PACK is related to uint8_t. Change FLOAT_PACK to 16 for AVX512
     // implies we need ptrs of std::uint16_t.
     static const auto FLOAT_PACK = 8;
-    const std::uint64_t limit = size - size % (FLOAT_PACK * 16);
+    const std::uint64_t limit = size - size % (FLOAT_PACK * 32);
     // TODO: Loop unroll
     auto i = 0;
-    for(; i < limit; i+= (FLOAT_PACK * 16)) {
-        int accum[4]= {0};
-        // Load all 32 * 16 floats.
+    for(; i < limit; i+= (FLOAT_PACK * 32)) {
+        int accum[8]= {0};
+        // Load all 32 * 32 floats.
         __m256 res1 = _mm256_load_ps(data + i + pt[0]);
         __m256 res2 = _mm256_load_ps(data + i + pt[1]);
         __m256 res3 = _mm256_load_ps(data + i + pt[2]);
@@ -223,27 +223,65 @@ void sign(const float* data, std::uint8_t* res, std::size_t size){
         __m256 res14 = _mm256_load_ps(data + i + pt[13]);
         __m256 res15 = _mm256_load_ps(data + i + pt[14]);
         __m256 res16 = _mm256_load_ps(data + i + pt[15]);
+        __m256 res17 = _mm256_load_ps(data + i + pt[16]);
+        __m256 res18 = _mm256_load_ps(data + i + pt[17]);
+        __m256 res19 = _mm256_load_ps(data + i + pt[18]);
+        __m256 res20 = _mm256_load_ps(data + i + pt[19]);
+        __m256 res21 = _mm256_load_ps(data + i + pt[20]);
+        __m256 res22 = _mm256_load_ps(data + i + pt[21]);
+        __m256 res23 = _mm256_load_ps(data + i + pt[22]);
+        __m256 res24 = _mm256_load_ps(data + i + pt[23]);
+        __m256 res25 = _mm256_load_ps(data + i + pt[24]);
+        __m256 res26 = _mm256_load_ps(data + i + pt[25]);
+        __m256 res27 = _mm256_load_ps(data + i + pt[26]);
+        __m256 res28 = _mm256_load_ps(data + i + pt[27]);
+        __m256 res29 = _mm256_load_ps(data + i + pt[28]);
+        __m256 res30 = _mm256_load_ps(data + i + pt[29]);
+        __m256 res31 = _mm256_load_ps(data + i + pt[30]);
+        __m256 res32 = _mm256_load_ps(data + i + pt[31]);
 
         accum[0] |= _mm256_movemask_ps(res1) << pt[3];
         accum[0] |= _mm256_movemask_ps(res2) << pt[2];
         accum[0] |= _mm256_movemask_ps(res3) << pt[1];
         accum[0] |= _mm256_movemask_ps(res4) << pt[0];
+
         accum[1] |= _mm256_movemask_ps(res5) << pt[3];
         accum[1] |= _mm256_movemask_ps(res6) << pt[2];
         accum[1] |= _mm256_movemask_ps(res7) << pt[1];
         accum[1] |= _mm256_movemask_ps(res8) << pt[0];
+
         accum[2] |= _mm256_movemask_ps(res9) << pt[3];
         accum[2] |= _mm256_movemask_ps(res10) << pt[2];
         accum[2] |= _mm256_movemask_ps(res11) << pt[1];
         accum[2] |= _mm256_movemask_ps(res12) << pt[0];
+
         accum[3] |= _mm256_movemask_ps(res13) << pt[3];
         accum[3] |= _mm256_movemask_ps(res14) << pt[2];
         accum[3] |= _mm256_movemask_ps(res15) << pt[1];
         accum[3] |= _mm256_movemask_ps(res16) << pt[0];
 
-//        __m256i chunk = _mm256_load_si256((__m256i *) accum);
-        __m128i chunk = _mm_load_si128((__m128i *) accum);
-        _mm_store_si128((__m128i*) (res + i/FLOAT_PACK), chunk);
+        accum[4] |= _mm256_movemask_ps(res17) << pt[3];
+        accum[4] |= _mm256_movemask_ps(res18) << pt[2];
+        accum[4] |= _mm256_movemask_ps(res19) << pt[1];
+        accum[4] |= _mm256_movemask_ps(res20) << pt[0];
+
+        accum[5] |= _mm256_movemask_ps(res21) << pt[3];
+        accum[5] |= _mm256_movemask_ps(res22) << pt[2];
+        accum[5] |= _mm256_movemask_ps(res23) << pt[1];
+        accum[5] |= _mm256_movemask_ps(res24) << pt[0];
+
+        accum[6] |= _mm256_movemask_ps(res25) << pt[3];
+        accum[6] |= _mm256_movemask_ps(res26) << pt[2];
+        accum[6] |= _mm256_movemask_ps(res27) << pt[1];
+        accum[6] |= _mm256_movemask_ps(res28) << pt[0];
+
+        accum[7] |= _mm256_movemask_ps(res29) << pt[3];
+        accum[7] |= _mm256_movemask_ps(res30) << pt[2];
+        accum[7] |= _mm256_movemask_ps(res31) << pt[1];
+        accum[7] |= _mm256_movemask_ps(res32) << pt[0];
+
+        __m256i chunk = _mm256_load_si256((__m256i *) accum);
+        _mm256_store_si256((__m256i*) (res + i/FLOAT_PACK), chunk);
     }
 
     for(; i < size - size % FLOAT_PACK; i+=FLOAT_PACK) {
