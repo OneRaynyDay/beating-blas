@@ -173,7 +173,7 @@ static constexpr unsigned pt[] = {
 /// \param data - floating point array to extract sign from
 /// \param res - resulting packed bit array
 /// \param size - size of data
-void unsafe_sign(const float* data, std::uint8_t* res, std::size_t size){
+inline void unsafe_sign(const float* data, std::uint8_t* res, std::size_t size){
     // 8 floats at a time
     // FLOAT_PACK is related to uint8_t. Change FLOAT_PACK to 16 for AVX512
     // implies we need ptrs of std::uint16_t.
@@ -284,7 +284,7 @@ void unsafe_sign(const float* data, std::uint8_t* res, std::size_t size){
 /// \param data - floating point array to extract sign from
 /// \param res - resulting packed bit array
 /// \param size - size of data
-void sign(const float* data, std::uint8_t* res, std::size_t size){
+inline void sign(const float* data, std::uint8_t* res, std::size_t size){
     ALLIGN_ASSERT(data)
     ALLIGN_ASSERT(res)
     // 8 floats at a time
@@ -398,7 +398,7 @@ void sign(const float* data, std::uint8_t* res, std::size_t size){
 /// \param y - right operand data
 /// \param res - result buffer to save into
 /// \param size - size of x and y. IMPORTANT: IN BITS.
-void xnor(std::uint8_t* x, std::uint8_t* y, std::uint8_t* res, std::size_t size){
+inline void xnor(std::uint8_t* x, std::uint8_t* y, std::uint8_t* res, std::size_t size){
     ALLIGN_ASSERT(x)
     ALLIGN_ASSERT(y)
     ALLIGN_ASSERT(res)
@@ -501,7 +501,7 @@ namespace popcnt{
 /// Performs popcount (population count) on bits
 /// \param data - bits of data
 /// \param size - length of data. IMPORTANT: IN BITS.
-long long sum(const std::uint8_t* data, const std::size_t size)
+inline long long sum(const std::uint8_t* data, const std::size_t size)
 {
     ALLIGN_ASSERT(data)
     static constexpr auto UINT8_PACK = 32;
@@ -532,7 +532,7 @@ long long sum(const std::uint8_t* data, const std::size_t size)
 /// Performs an xnordot on the given xt::xarrays
 /// \param a1 - xarray to compute dot product
 /// \param a2 - xarray to compute dot product
-long long xnordot(const xt::xarray<float>& a1,
+inline long long xnordot(const xt::xarray<float>& a1,
 const xt::xarray<float>& a2,
 ::input_alignment alignment = ::input_alignment::safe){
     // Enforce alignment

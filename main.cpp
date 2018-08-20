@@ -49,8 +49,6 @@ void print_bitset(std::uint8_t b){
     std::cout << std::endl;
 }
 
-
-
 // === dot benchmark functions ===
 
 auto blas_dot(const xt::xarray<float>& a1, const xt::xarray<float>& a2){
@@ -135,7 +133,6 @@ void benchmark_gemm(){
         std::cout << "====== Array size : " << ARR_SIZE << " ====== " << std::endl;
         // We produce an alternating sequence of 0's and 1's. We need to make it start at 1
         // because sometimes the compiler implicitly turns it to a positive 0 even though it should be negative.
-        // TODO: Remove the below statement
         auto X_SIZE = ARR_SIZE;
         auto Y_SIZE = ARR_SIZE;
         auto Z_SIZE = ARR_SIZE;
@@ -161,12 +158,6 @@ void benchmark_gemm(){
             }
         }
 
-        auto trsp = [](const xt::xarray<float>& arr){
-            xt::xarray<float> x = xt::transpose(arr);
-        };
-
-        timeit(trsp, arr1);
-
         std::cout << "=== hand-tuned bitpack+xnor+popcount (unsafe) ===" << std::endl;
         timeit(xnorgemm, arr1, arr2);
 
@@ -184,6 +175,16 @@ void benchmark_gemm(){
 // ===
 
 int main() {
-    benchmark_dot();
+//    benchmark_dot();
     benchmark_gemm();
+
+    auto run = [&](){
+        xt::xarray<float> x { {1, -1, 1}, {-1, -1, -1}, {1, 1, -1} };
+        xt::xarray<float> y { {1, 1}, {1, -1}, {-1, -1} };
+        xt::xarray<float> z { {-1, 1}, {-1, 1}, {3, 1} };
+        auto res = xnorgemm(x, y);
+        assert(xt::allclose(res, z));
+    };
+
+    run();
 }

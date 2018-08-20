@@ -12,20 +12,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f08d4a1-c224-4f15-9be1-cd35a8310f82" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/xnordot.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xnorgemm.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.dSYM/Contents/Resources/DWARF/bit_packing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.dSYM/Contents/Resources/DWARF/bit_packing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xnordot.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/xnordot.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xnorgemm.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/xnorgemm.hpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug-gcc-8/" />
@@ -38,14 +34,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-gcc 8" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49882445">
+    <splitter split-orientation="horizontal" split-proportion="0.51642984">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+                <state relative-caret-position="190">
+                  <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
                 </state>
               </provider>
             </entry>
@@ -53,13 +49,26 @@
           <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret line="136" column="19" selection-start-line="136" selection-start-column="19" selection-end-line="136" selection-end-column="19" />
+                <state relative-caret-position="546">
+                  <caret line="180" column="20" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="20" />
                   <folding>
                     <element signature="e#72#91#0" expanded="true" />
                     <element signature="e#202#228#0" expanded="true" />
                     <element signature="e#415#466#0" expanded="true" />
-                    <marker date="1534800226265" expanded="true" signature="4010:4162" ph="..." />
+                    <marker date="1534805111707" expanded="true" signature="4008:4160" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="timeit.hpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/timeit.hpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="171">
+                  <caret line="9" selection-start-line="9" selection-end-line="9" />
+                  <folding>
+                    <element signature="e#13#32#0" expanded="true" />
+                    <element signature="e#103#130#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -68,21 +77,12 @@
           <file leaf-file-name="xnorgemm.hpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/xnorgemm.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="329">
-                  <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+                <state relative-caret-position="211">
+                  <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
                   <folding>
                     <element signature="e#39#58#0" expanded="true" />
                     <element signature="e#117#151#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="xcontainer.hpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/third_party/xtensor/include/xtensor/xcontainer.hpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="373">
-                  <caret line="770" selection-start-line="770" selection-end-line="770" />
                 </state>
               </provider>
             </entry>
@@ -94,8 +94,8 @@
           <file leaf-file-name="xnordot.hpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/xnordot.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="620">
-                  <caret line="549" column="5" lean-forward="true" selection-start-line="549" selection-start-column="5" selection-end-line="549" selection-end-column="5" />
+                <state relative-caret-position="584">
+                  <caret line="551" column="4" selection-start-line="551" selection-start-column="4" selection-end-line="551" selection-end-column="4" />
                   <folding>
                     <element signature="e#40#59#0" expanded="true" />
                     <element signature="e#132#166#0" expanded="true" />
@@ -117,10 +117,10 @@
         <option value="$PROJECT_DIR$/pack.hpp" />
         <option value="$PROJECT_DIR$/allign.hpp" />
         <option value="$PROJECT_DIR$/timeit.hpp" />
-        <option value="$PROJECT_DIR$/xnorgemm.hpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/xnordot.hpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/xnorgemm.hpp" />
       </list>
     </option>
   </component>
@@ -196,22 +196,23 @@
       <option name="presentableId" value="Default" />
       <updated>1534351863219</updated>
       <workItem from="1534351864908" duration="63680000" />
-      <workItem from="1534742661324" duration="19069000" />
+      <workItem from="1534742661324" duration="23331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82749000" />
+    <option name="totallyTimeSpent" value="87011000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2556" y="583" width="2552" height="1410" extended-state="6" />
+    <frame x="-2556" y="583" width="1276" height="1410" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21277429" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23510972" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.33757484" />
       <window_info anchor="bottom" id="CMake" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2724551" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32784432" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -280,7 +281,7 @@
             <element signature="e#72#91#0" expanded="true" />
             <element signature="e#202#228#0" expanded="true" />
             <element signature="e#415#466#0" expanded="true" />
-            <marker date="1534800226265" expanded="true" signature="4010:4162" ph="..." />
+            <marker date="1534805111707" expanded="true" signature="4008:4160" ph="..." />
           </folding>
         </state>
       </provider>
@@ -361,17 +362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/timeit.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="e#13#32#0" expanded="true" />
-            <element signature="e#103#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/gcc/8.2.0/lib/gcc/8/gcc/x86_64-apple-darwin17.7.0/8.2.0/include/avxintrin.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -386,32 +376,6 @@
           <folding>
             <element signature="e#6470#7074#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/third_party/xtensor/include/xtensor/xtensor_forward.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding>
-            <element signature="e#2115#2312#0" expanded="true" />
-            <element signature="e#2448#2823#0" expanded="true" />
-            <element signature="e#3341#3598#0" expanded="true" />
-            <element signature="e#3764#3865#0" expanded="true" />
-            <element signature="e#4556#4702#0" expanded="true" />
-            <element signature="e#4800#4901#0" expanded="true" />
-            <element signature="e#5220#5315#0" expanded="true" />
-            <element signature="e#5358#5453#0" expanded="true" />
-            <element signature="e#6178#6266#0" expanded="true" />
-            <element signature="e#6777#6983#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/third_party/xtensor/include/xtensor/xtensor_config.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -474,44 +438,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/third_party/xtensor/include/xtensor/xtensor_config.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="391">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xnordot.hpp">
+    <entry file="file://$PROJECT_DIR$/third_party/xtensor/include/xtensor/xtensor_forward.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="549" column="5" lean-forward="true" selection-start-line="549" selection-start-column="5" selection-end-line="549" selection-end-column="5" />
+        <state relative-caret-position="455">
+          <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
           <folding>
-            <element signature="e#40#59#0" expanded="true" />
-            <element signature="e#132#166#0" expanded="true" />
+            <element signature="e#962#1326#0" expanded="true" />
+            <element signature="e#2115#2312#0" expanded="true" />
+            <element signature="e#2448#2823#0" expanded="true" />
+            <element signature="e#3341#3598#0" expanded="true" />
+            <element signature="e#3764#3865#0" expanded="true" />
+            <element signature="e#4556#4702#0" expanded="true" />
+            <element signature="e#4800#4901#0" expanded="true" />
+            <element signature="e#5220#5315#0" expanded="true" />
+            <element signature="e#5358#5453#0" expanded="true" />
+            <element signature="e#6178#6266#0" expanded="true" />
+            <element signature="e#6777#6983#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeit.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#13#32#0" expanded="true" />
+            <element signature="e#103#130#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="136" column="19" selection-start-line="136" selection-start-column="19" selection-end-line="136" selection-end-column="19" />
+        <state relative-caret-position="546">
+          <caret line="180" column="20" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="20" />
           <folding>
             <element signature="e#72#91#0" expanded="true" />
             <element signature="e#202#228#0" expanded="true" />
             <element signature="e#415#466#0" expanded="true" />
-            <marker date="1534800226265" expanded="true" signature="4010:4162" ph="..." />
+            <marker date="1534805111707" expanded="true" signature="4008:4160" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xnorgemm.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="211">
+          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
           <folding>
             <element signature="e#39#58#0" expanded="true" />
             <element signature="e#117#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xnordot.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="551" column="4" selection-start-line="551" selection-start-column="4" selection-end-line="551" selection-end-column="4" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+            <element signature="e#132#166#0" expanded="true" />
           </folding>
         </state>
       </provider>
