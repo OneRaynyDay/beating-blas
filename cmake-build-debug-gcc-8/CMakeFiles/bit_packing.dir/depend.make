@@ -1472,4 +1472,6 @@ CMakeFiles/bit_packing.dir/main.cpp.o: ../third_party/xtl/include/xtl/xvariant.h
 CMakeFiles/bit_packing.dir/main.cpp.o: ../third_party/xtl/include/xtl/xvariant_impl.hpp
 CMakeFiles/bit_packing.dir/main.cpp.o: ../main.cpp
 CMakeFiles/bit_packing.dir/main.cpp.o: ../timeit.hpp
+CMakeFiles/bit_packing.dir/main.cpp.o: ../xnordot.hpp
+CMakeFiles/bit_packing.dir/main.cpp.o: ../xnorgemm.hpp
 

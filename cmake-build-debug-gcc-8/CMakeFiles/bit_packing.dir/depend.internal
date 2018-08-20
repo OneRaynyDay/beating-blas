@@ -1473,3 +1473,5 @@ CMakeFiles/bit_packing.dir/main.cpp.o
  ../third_party/xtl/include/xtl/xvariant_impl.hpp
  /Users/ray_zhang/home/bit-packing/main.cpp
  /Users/ray_zhang/home/bit-packing/timeit.hpp
+ /Users/ray_zhang/home/bit-packing/xnordot.hpp
+ /Users/ray_zhang/home/bit-packing/xnorgemm.hpp
