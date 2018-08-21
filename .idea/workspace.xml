@@ -11,21 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f08d4a1-c224-4f15-9be1-cd35a8310f82" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.dSYM/Contents/Resources/DWARF/bit_packing" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/bit_packing.dSYM/Contents/Resources/DWARF/bit_packing" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xnordot.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/xnordot.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xnorgemm.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/xnorgemm.hpp" afterDir="false" />
-    </list>
+    <list default="true" id="0f08d4a1-c224-4f15-9be1-cd35a8310f82" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug-gcc-8/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +38,8 @@
           <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="565">
-                  <caret line="182" column="4" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
+                <state relative-caret-position="584">
+                  <caret line="183" column="37" selection-start-line="183" selection-start-column="37" selection-end-line="183" selection-end-column="37" />
                   <folding>
                     <element signature="e#72#91#0" expanded="true" />
                     <element signature="e#202#228#0" expanded="true" />
@@ -158,10 +144,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2556" />
-    <option name="y" value="583" />
-    <option name="width" value="1276" />
-    <option name="height" value="1410" />
+    <option name="x" value="720" />
+    <option name="y" value="26" />
+    <option name="width" value="716" />
+    <option name="height" value="870" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -220,23 +206,22 @@
       <option name="presentableId" value="Default" />
       <updated>1534351863219</updated>
       <workItem from="1534351864908" duration="63680000" />
-      <workItem from="1534742661324" duration="26345000" />
+      <workItem from="1534742661324" duration="27595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90025000" />
+    <option name="totallyTimeSpent" value="91275000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2556" y="583" width="1276" height="1410" extended-state="0" />
-    <editor active="true" />
+    <frame x="720" y="26" width="716" height="870" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23510972" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.41899443" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.39296407" />
       <window_info anchor="bottom" id="CMake" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32784432" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.55025125" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -530,8 +515,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="182" column="4" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
+        <state relative-caret-position="584">
+          <caret line="183" column="37" selection-start-line="183" selection-start-column="37" selection-end-line="183" selection-end-column="37" />
           <folding>
             <element signature="e#72#91#0" expanded="true" />
             <element signature="e#202#228#0" expanded="true" />

@@ -177,15 +177,15 @@ void benchmark_gemm(){
 
 int main() {
 //    benchmark_dot();
-//    benchmark_gemm();
+   benchmark_gemm();
 
     // Unit tests
-    auto test_iters = 100;
-    for(auto i = 0; i < test_iters; i++){
-        xt::xarray<float, xt::layout_type::row_major> a1 = xt::random::rand<float>({100, 250}, -1000.0f, 1000.0f);
-        xt::xarray<float, xt::layout_type::row_major> a2 = xt::random::rand<float>({250, 30}, -1000.0f, 1000.0f);
-        auto res = xt::linalg::dot(xt::sign(a1), xt::sign(a2));
-        auto xnorgemm_res = xnorgemm(a1, a2);
-        assert(xt::allclose(res, xnorgemm_res));
-    }
+    // auto test_iters = 100;
+    // for(auto i = 0; i < test_iters; i++){
+        // xt::xarray<float, xt::layout_type::row_major> a1 = xt::random::rand<float>({100, 250}, -1000.0f, 1000.0f);
+        // xt::xarray<float, xt::layout_type::row_major> a2 = xt::random::rand<float>({250, 30}, -1000.0f, 1000.0f);
+        // auto res = xt::linalg::dot(xt::sign(a1), xt::sign(a2));
+        // auto xnorgemm_res = xnorgemm(a1, a2);
+        // assert(xt::allclose(res, xnorgemm_res));
+    // }
 }
