@@ -1441,6 +1441,7 @@ CMakeFiles/bit_packing.dir/main.cpp.o
  ../third_party/xtensor/include/xtensor/xmath.hpp
  ../third_party/xtensor/include/xtensor/xoffset_view.hpp
  ../third_party/xtensor/include/xtensor/xoperation.hpp
+ ../third_party/xtensor/include/xtensor/xrandom.hpp
  ../third_party/xtensor/include/xtensor/xreducer.hpp
  ../third_party/xtensor/include/xtensor/xscalar.hpp
  ../third_party/xtensor/include/xtensor/xsemantic.hpp

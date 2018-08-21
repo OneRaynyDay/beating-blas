@@ -14,6 +14,7 @@
 #include <xtensor/xtensor.hpp>
 #include <xtensor/xfixed.hpp>
 #include <xtensor/xview.hpp>
+#include <xtensor/xrandom.hpp>
 
 // Require this for all float input
 #include <xsimd/memory/xsimd_aligned_allocator.hpp>
@@ -56,8 +57,8 @@ auto blas_dot(const xt::xarray<float>& a1, const xt::xarray<float>& a2){
 }
 
 auto blas_sign_dot(const xt::xarray<float>& a1, const xt::xarray<float>& a2){
-    auto&& i8a1 = xt::cast<bool>(xt::sign(a1));
-    auto&& i8a2 = xt::cast<bool>(xt::sign(a2));
+    auto&& i8a1 = xt::cast<std::int8_t>(xt::sign(a1));
+    auto&& i8a2 = xt::cast<std::int8_t>(xt::sign(a2));
     return xt::linalg::dot(i8a1, i8a2);
 }
 
@@ -176,15 +177,15 @@ void benchmark_gemm(){
 
 int main() {
 //    benchmark_dot();
-    benchmark_gemm();
+//    benchmark_gemm();
 
-    auto run = [&](){
-        xt::xarray<float> x { {1, -1, 1}, {-1, -1, -1}, {1, 1, -1} };
-        xt::xarray<float> y { {1, 1}, {1, -1}, {-1, -1} };
-        xt::xarray<float> z { {-1, 1}, {-1, 1}, {3, 1} };
-        auto res = xnorgemm(x, y);
-        assert(xt::allclose(res, z));
-    };
-
-    run();
+    // Unit tests
+    auto test_iters = 100;
+    for(auto i = 0; i < test_iters; i++){
+        xt::xarray<float, xt::layout_type::row_major> a1 = xt::random::rand<float>({100, 250}, -1000.0f, 1000.0f);
+        xt::xarray<float, xt::layout_type::row_major> a2 = xt::random::rand<float>({250, 30}, -1000.0f, 1000.0f);
+        auto res = xt::linalg::dot(xt::sign(a1), xt::sign(a2));
+        auto xnorgemm_res = xnorgemm(a1, a2);
+        assert(xt::allclose(res, xnorgemm_res));
+    }
 }

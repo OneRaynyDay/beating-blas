@@ -11626,6 +11626,22 @@ xscalar.hpp
 xstrides.hpp
 ../third_party/xtensor/include/xtensor/xstrides.hpp
 
+../third_party/xtensor/include/xtensor/xrandom.hpp
+functional
+-
+random
+-
+utility
+-
+xbuilder.hpp
+../third_party/xtensor/include/xtensor/xbuilder.hpp
+xgenerator.hpp
+../third_party/xtensor/include/xtensor/xgenerator.hpp
+xtensor.hpp
+../third_party/xtensor/include/xtensor/xtensor.hpp
+xview.hpp
+../third_party/xtensor/include/xtensor/xview.hpp
+
 ../third_party/xtensor/include/xtensor/xreducer.hpp
 algorithm
 -
@@ -12110,6 +12126,8 @@ xtensor/xtensor.hpp
 xtensor/xfixed.hpp
 -
 xtensor/xview.hpp
+-
+xtensor/xrandom.hpp
 -
 xsimd/memory/xsimd_aligned_allocator.hpp
 -

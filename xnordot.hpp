@@ -29,6 +29,13 @@ static constexpr int ALIGN_SIZE = 32;
         throw std::runtime_error(std::string(file) + ':' + std::to_string(line) + ": Not alligned (" #expr ") \n\t");  \
     }
 
+#define C_LAYOUT_ASSERT(expr) C_LAYOUT_ASSERT_IMPL(expr, __FILE__, __LINE__)
+#define C_LAYOUT_ASSERT_IMPL(expr, file,line)                                                                          \
+    if (expr.layout() != xt::layout_type::row_major)                                                                   \
+    {                                                                                                                  \
+        throw std::runtime_error(std::string(file) + ':' + std::to_string(line) + ": Layout not C-style (" #expr ") \n\t"); \
+    }
+
 static constexpr std::uint8_t lookup8bit[256] = {
         /* 0 */ 0, /* 1 */ 1, /* 2 */ 1, /* 3 */ 2,
         /* 4 */ 1, /* 5 */ 2, /* 6 */ 2, /* 7 */ 3,

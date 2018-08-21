@@ -14,6 +14,9 @@
     <list default="true" id="0f08d4a1-c224-4f15-9be1-cd35a8310f82" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug-gcc-8/CMakeFiles/bit_packing.dir/main.cpp.o" afterDir="false" />
@@ -34,28 +37,49 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-gcc 8" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.51642984">
+    <splitter split-orientation="horizontal" split-proportion="0.5679396">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
-                  <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+                <state relative-caret-position="247">
+                  <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="546">
-                  <caret line="180" column="20" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="20" />
+                <state relative-caret-position="565">
+                  <caret line="182" column="4" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
                   <folding>
                     <element signature="e#72#91#0" expanded="true" />
                     <element signature="e#202#228#0" expanded="true" />
                     <element signature="e#415#466#0" expanded="true" />
-                    <marker date="1534805111707" expanded="true" signature="4008:4160" ph="..." />
+                    <marker date="1534811312086" expanded="true" signature="4053:4205" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="xtensor_forward.hpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/third_party/xtensor/include/xtensor/xtensor_forward.hpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="466">
+                  <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#962#1326#0" expanded="true" />
+                    <element signature="e#2115#2312#0" expanded="true" />
+                    <element signature="e#3341#3598#0" expanded="true" />
+                    <element signature="e#3764#3865#0" expanded="true" />
+                    <element signature="e#4556#4702#0" expanded="true" />
+                    <element signature="e#4800#4901#0" expanded="true" />
+                    <element signature="e#5220#5315#0" expanded="true" />
+                    <element signature="e#5358#5453#0" expanded="true" />
+                    <element signature="e#6178#6266#0" expanded="true" />
+                    <element signature="e#6777#6983#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -64,8 +88,8 @@
           <file leaf-file-name="timeit.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/timeit.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="171">
-                  <caret line="9" selection-start-line="9" selection-end-line="9" />
+                <state relative-caret-position="133">
+                  <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
                   <folding>
                     <element signature="e#13#32#0" expanded="true" />
                     <element signature="e#103#130#0" expanded="true" />
@@ -74,11 +98,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="xnorgemm.hpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="xnorgemm.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/xnorgemm.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="211">
-                  <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+                <state relative-caret-position="375">
+                  <caret line="80" column="37" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
                   <folding>
                     <element signature="e#39#58#0" expanded="true" />
                     <element signature="e#117#151#0" expanded="true" />
@@ -94,8 +118,8 @@
           <file leaf-file-name="xnordot.hpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/xnordot.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="584">
-                  <caret line="551" column="4" selection-start-line="551" selection-start-column="4" selection-end-line="551" selection-end-column="4" />
+                <state relative-caret-position="560">
+                  <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
                   <folding>
                     <element signature="e#40#59#0" expanded="true" />
                     <element signature="e#132#166#0" expanded="true" />
@@ -119,8 +143,8 @@
         <option value="$PROJECT_DIR$/timeit.hpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/xnordot.hpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/xnorgemm.hpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -196,12 +220,12 @@
       <option name="presentableId" value="Default" />
       <updated>1534351863219</updated>
       <workItem from="1534351864908" duration="63680000" />
-      <workItem from="1534742661324" duration="23331000" />
+      <workItem from="1534742661324" duration="26345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87011000" />
+    <option name="totallyTimeSpent" value="90025000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2556" y="583" width="1276" height="1410" extended-state="0" />
@@ -209,7 +233,7 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23510972" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.33757484" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.39296407" />
       <window_info anchor="bottom" id="CMake" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32784432" />
@@ -258,7 +282,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/xnordot.hpp</url>
-          <line>266</line>
+          <line>273</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
@@ -281,7 +305,7 @@
             <element signature="e#72#91#0" expanded="true" />
             <element signature="e#202#228#0" expanded="true" />
             <element signature="e#415#466#0" expanded="true" />
-            <marker date="1534805111707" expanded="true" signature="4008:4160" ph="..." />
+            <marker date="1534811312086" expanded="true" signature="4053:4205" ph="..." />
           </folding>
         </state>
       </provider>
@@ -445,14 +469,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeit.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#13#32#0" expanded="true" />
+            <element signature="e#103#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/third_party/xtensor/include/xtensor/xtensor_forward.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="63" column="46" lean-forward="true" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
+        <state relative-caret-position="466">
+          <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding>
             <element signature="e#962#1326#0" expanded="true" />
             <element signature="e#2115#2312#0" expanded="true" />
-            <element signature="e#2448#2823#0" expanded="true" />
             <element signature="e#3341#3598#0" expanded="true" />
             <element signature="e#3764#3865#0" expanded="true" />
             <element signature="e#4556#4702#0" expanded="true" />
@@ -465,41 +506,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/xnordot.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timeit.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="560">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
           <folding>
-            <element signature="e#13#32#0" expanded="true" />
-            <element signature="e#103#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="180" column="20" selection-start-line="180" selection-start-column="20" selection-end-line="180" selection-end-column="20" />
-          <folding>
-            <element signature="e#72#91#0" expanded="true" />
-            <element signature="e#202#228#0" expanded="true" />
-            <element signature="e#415#466#0" expanded="true" />
-            <marker date="1534805111707" expanded="true" signature="4008:4160" ph="..." />
+            <element signature="e#40#59#0" expanded="true" />
+            <element signature="e#132#166#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xnorgemm.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state relative-caret-position="375">
+          <caret line="80" column="37" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
           <folding>
             <element signature="e#39#58#0" expanded="true" />
             <element signature="e#117#151#0" expanded="true" />
@@ -507,13 +528,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xnordot.hpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="551" column="4" selection-start-line="551" selection-start-column="4" selection-end-line="551" selection-end-column="4" />
+        <state relative-caret-position="565">
+          <caret line="182" column="4" selection-start-line="182" selection-start-column="4" selection-end-line="182" selection-end-column="4" />
           <folding>
-            <element signature="e#40#59#0" expanded="true" />
-            <element signature="e#132#166#0" expanded="true" />
+            <element signature="e#72#91#0" expanded="true" />
+            <element signature="e#202#228#0" expanded="true" />
+            <element signature="e#415#466#0" expanded="true" />
+            <marker date="1534811312086" expanded="true" signature="4053:4205" ph="..." />
           </folding>
         </state>
       </provider>

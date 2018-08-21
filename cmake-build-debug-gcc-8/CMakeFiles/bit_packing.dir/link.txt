@@ -1,1 +1,1 @@
-/usr/local/bin/g++-8   -lcblas -march=haswell -ffast-math -funroll-loops -g -O3 -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/bit_packing.dir/main.cpp.o  -o bit_packing 
+/usr/local/bin/g++-8   -lcblas -march=native -ffast-math -funroll-loops -g -O3 -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/bit_packing.dir/main.cpp.o  -o bit_packing 

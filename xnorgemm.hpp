@@ -22,6 +22,8 @@ const xt::xarray<float>& _a2
 ){
     xt::xarray<float> a2 = xt::transpose(_a2);
     // Check allignment
+    C_LAYOUT_ASSERT(a1)
+    C_LAYOUT_ASSERT(a2)
     ALLIGN_ASSERT(a1.data())
     ALLIGN_ASSERT(a2.data())
     // Check size
@@ -51,6 +53,20 @@ const xt::xarray<float>& _a2
         auto offset = i * in_shape_a2[1];
         unsafe_sign(a2.data() + offset, bitset_a2[i].data(), in_shape_a2[1]);
     }
+
+//    for(auto& x : bitset_a1){
+//        for(auto y : x){
+//            std::cout << y << " ";
+//        }
+//        std::cout << std::endl;
+//    }
+//    std::cout << "\n\n";
+//    for(auto& x : bitset_a2){
+//        for(auto y : x){
+//            std::cout << y << " ";
+//        }
+//        std::cout << std::endl;
+//    }
 
     // WARNING: Extremely naive kernel - no blocking, no unrolling, only transpose
     auto col_size = in_shape_a1[1];
